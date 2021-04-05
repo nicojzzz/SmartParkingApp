@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Color theme for statusbar -->
+    <!-- <meta name="theme-color" content="#2196f3"> -->
+    <meta name="theme-color" content="#03f8fc">
+
+    <!-- Your app title -->
+    <title>Smart Parking</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css">
+    <!-- Path to icons -->
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+    
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+       
+            <!-- Top Navbar
+            <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <div class="left"><i class="icon icon-back"></i></div>
+                    <div class="title"></div>
+                    <div class="right"><i class="icon icon-forward"></i></div>
+                </div>
+            </div> -->
+     
+
+<!-- ----------------------------------------------------------------------------------------- -->            
+       
+  <!-- Initial Page, "data-name" contains page name -->
+  <div data-name="index" class="page">
+
+          <!-- Scrollable page content -->
+    <div id="fondo" class="page no-navbar no-toolbar no-swipeback">
+ 
+      <div class="block no-hairlines">
+
+      <div class="page-content login-screen-content">
+        <img id="bloque" src="img/fondo.jpg">
+
+      <div class="login-screen-title">Smart Parking</div>
+
+      <div class="block-title text-align-center">Inicia Sesion</div>
+       
+        
+        <form>
+          <div class="list">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Email</div>
+                  <div class="item-input-wrap">
+                    <input type="email" name="email" placeholder="Tu email" id="emailLog" value="nico@gmail.com" />
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Contraseña</div>
+                  <div class="item-input-wrap">
+                    <input type="password" name="password" placeholder="Tu Contraseña" id="passLog" value="hola123" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="list">
+            <ul>
+              <li><a href="#" class="list-button" id="btnLogin">Ingresa</a></li>
+            </ul>
+            <div class="block-footer">
+              <p>Si todavia no tenes cuenta</p>
+              <p><a href="#"  id="regEnLogin">Registrate</a></p>
+
+              <!--<p><a href="#" class="list-button" id="btnIrAlRegAdmin">Registra tu estacionamiento</a></p>-->
+            </div>
+          </div>
+        </form>
+       
+      </div>  
+      </div>
+    </div>  
+   </div>
+                
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>     
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCybGVZJDP9UTve7kpWEs9wPdcIApe4Uts",
+        authDomain: "estacionapp-990f1.firebaseapp.com",
+        projectId: "estacionapp-990f1",
+        storageBucket: "estacionapp-990f1.appspot.com",
+        messagingSenderId: "136367679610",
+        appId: "1:136367679610:web:134097cb1c75cc9d5bb3c3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

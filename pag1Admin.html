@@ -1,0 +1,44 @@
+<div data-name="pag1Admin" class="page">
+  <!-- Scrollable page content -->
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <div class="title">Mis Cocheras</div>
+      <div class="right">
+        <a href="#" class="link icon-only">
+        <i class="f7-icons" id="power1A">power</i>
+        </a>
+      </div>
+    </div>
+  </div> 
+  <div class="toolbar toolbar-bottom">
+    <div class="toolbar-inner centro">
+      <div class="center">
+        <a href="#" class="link icon-only">
+          <i class="f7-icons">person_crop_circle</i>
+        </a>
+      </div>  
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block-title"><h2 class="text-align-center" id="nomEst" value="">Estacionamiento: Nicolas</h2></div>
+    <div class="block">
+      <p><a class="button popup-open" href="#" data-popup=".popup-about">Crear Cochera</a></p>
+        <div class="popup popup-about">
+          <div class="block text-align-center">
+          
+          <p>Ingresar numero de cochera</p>
+          <p>Ejemplo de enumeracion [01, 02...]</p>
+          <input id="numCochera" type="numero" value="" placeholder="Ingresar Numero" required validate pattern="[0-9]*">
+          <p><a class="link popup-close" href="#" id="crearCochera"><h3>Crear</h3></a></p>
+          <p><a class="link popup-close" href="#" id="volverCochera"><h3>Cancelar</h3></a></p>
+        </div>
+        </div>
+        <div class="text-align-center"><h3>Lista de Cocheras</h3></div>
+        <div class="text-align-center" id="cocherasLibres"></div>
+        <div><button class="button" id="eliminarCochera">Eliminar Cochera</button></div>
+    </div>
+  </div>
+</div>
+          
